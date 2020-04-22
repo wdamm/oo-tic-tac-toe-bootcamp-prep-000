@@ -20,50 +20,8 @@ return input - 1
 end
 
 
-def move(array, index, charachter)
-array[index] = charachter
-end
-
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
-end
-
-def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
-end
-
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  space = valid_move?(board, index)
-  if space == true
-    charachter = current_player(board)
-    move(board, index, charachter)
-  else 
-    turn(board)
-  end
-  display_board(board)
-end
-
-
-def turn_count(board)
-count = 0
- board.each do |space|
-  if space != " "
-   count += 1
- end
-end
-return count
-end
-
-def current_player(board)
-  count = turn_count(board)
-  if count % 2 == 0
-    return "X"
-  else
-    return "O"
-  end
+def move(index, charachter = "X")
+@board[index] = charachter
 end
 
   
