@@ -105,7 +105,19 @@ if winning_board != nil
 end
 end
 
-
+def play()
+  until over?()
+  turn()
+  end
+  if over?()
+  if won?()
+  player = winner()
+  puts "Congratulations #{player}!"
+  elsif draw?() == true
+  puts "Cat's Game!"
+end
+end
+end
 
 
   
