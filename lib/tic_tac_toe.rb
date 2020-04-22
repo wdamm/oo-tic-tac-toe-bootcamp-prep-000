@@ -93,6 +93,11 @@ def over?()
  full?() || won?() || draw?()
 end
 
+def winner()
+winning_board = won?()
+if winning_board == nil
+  return nil
+end
 
 
 
