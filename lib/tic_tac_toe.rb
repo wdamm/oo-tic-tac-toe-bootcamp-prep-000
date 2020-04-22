@@ -28,7 +28,7 @@ def move(index, charachter = "X")
 @board[index] = charachter
 end
 
-def position_taken?(@board, location)
+def position_taken?(board, location)
   @board[location] != " " && @board[location] != ""
 end
 
