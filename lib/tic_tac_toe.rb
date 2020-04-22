@@ -21,7 +21,7 @@ end
 
 
 def move(index, charachter = "X")
-board[index] = charachter
+@board[index] = charachter
 end
 
   
