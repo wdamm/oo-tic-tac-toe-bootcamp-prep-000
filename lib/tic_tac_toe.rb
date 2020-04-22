@@ -93,6 +93,17 @@ def over?()
  full?() || won?() || draw?()
 end
 
+def winner()
+winning_board = won?()
+if winning_board == nil
+  return nil
+end
+
+winning_char = @board[win_combo(board)[0][0]]
+if winning_board != nil 
+  return winning_char
+end
+end
 
 
 
