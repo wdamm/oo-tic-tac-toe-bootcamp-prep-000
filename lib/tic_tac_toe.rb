@@ -55,7 +55,19 @@ def current_player()
   end
 end
 
-
+def turn()
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  space = valid_move?(index)
+  if space == true
+    charachter = current_player()
+    move(index, charachter)
+  else 
+    turn()
+  end
+  display_board()
+end
 
 
 
