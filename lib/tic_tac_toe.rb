@@ -69,11 +69,23 @@ def turn()
   display_board()
 end
 
-def won?(board) 
- win_combo(board).first
+def won?() 
+ win_combo().first
 end
 
+def full?()
+@board.none? {|i|
+i == " "
+}
+end
 
+def draw?()
+full?() && !won?()
+end
+
+def over?()
+ full?() || won?() || draw?()
+end
 
 
 
