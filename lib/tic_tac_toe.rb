@@ -69,6 +69,12 @@ def turn()
   display_board()
 end
 
+def win_combo()
+  WIN_COMBINATIONS.select do |winner|
+    (@board[winner[0]] =="X" && @board[winner[1]] == "X" && @board[winner[2]] == "X") || (@board[winner[0]] =="O" && @board[winner[1]] == "O" && @board[winner[2]] == "O")
+  end
+end
+
 def won?() 
  win_combo().first
 end
