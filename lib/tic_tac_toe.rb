@@ -69,7 +69,9 @@ def turn()
   display_board()
 end
 
-
+def won?(board) 
+ win_combo(board).first
+end
 
 
 
